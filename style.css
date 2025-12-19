@@ -1,0 +1,337 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ---------- Global Styles ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.3em;
+    margin-top: 140px; /* space for fixed header */
+    background-color: #f7f7f7; /* light neutral background */
+}
+label {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.3em;
+    background-color: #f7f7f7; /* light neutral background */
+}
+
+.main-heading {
+  color: #E94D40;
+  margin-bottom: 50px;
+}
+/* Colour Utility Classes */
+.burntred {
+    color: #E94D40;
+}
+
+.navyblue {
+    color: #0C243C;
+}
+
+/* Float Helpers */
+.floatleft {
+    float: left;
+}
+.floatright {
+    float: right;
+}
+.clearboth {
+    clear: both;
+}
+
+/* ---------- Typography ---------- */
+
+h1, h2, h3 {
+    color: #0C243C; /* navy blue headings */
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+
+
+p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.0;
+}
+
+/* ---------- Header & Navigation ---------- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, nav right */
+  padding: 10px 20px; /* space inside header */
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Logo container */
+.logo-btn {
+  margin: 0;          /* remove all auto margins */
+}
+
+/* Remove old margin-right rule */
+header img {
+  height: 60px;
+  margin: 0;          /* remove margin-right:auto that centers it */
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 15px;          /* spacing between buttons */
+}
+
+/* Nav buttons */
+.nav-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #E94D40;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: #c63b32;
+  animation: squish 0.5s ease;
+}
+.logo-btn {
+        
+  padding-left: 0;    /* ensures it's flush to left edge */
+}
+/* Logo container */
+.logo-btn {
+    margin-left: 20px;  /* adjust as needed to move slightly from the left edge */
+    padding-left: 0;    /* ensure it’s flush with the header padding */
+}
+
+.banner {
+  display: block;      /* removes inline baseline gap */
+  width: 100%;         /* makes it full width */
+  max-width: 1200px;   /* optional, keep your spec size */
+  margin-bottom: 30px; /* adds space below the banner */
+}
+
+
+/* Logo image */
+.logo-btn img {
+  height: 60px;
+  transition: transform 0.2s ease;
+}
+.logo-btn {
+    margin-left: 0;       /* remove any extra space */
+    padding-left: 0;      /* optional: flush with edge */
+    margin-left: -500px;   /* moves it 20px more left */
+}
+
+
+.logo-btn:hover img {
+  animation: squish 0.5s ease;
+}
+
+
+/* Squish keyframes */
+@keyframes squish {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.05, 0.95); }
+  60%  { transform: scale(0.97, 1.03); }
+  100% { transform: scale(1); }
+}
+
+
+/* ---------- Sections ---------- */
+
+section {
+    margin: 40px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    background: white;
+    border-radius: 10px;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- Banner ---------- */
+
+.banner {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #0C243C; /* navy blue button */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #081a2b;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;       
+  margin: 20px 0;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #0C243C; /* navy blue */
+}
+
+input, textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+textarea {
+  height: 80px;
+}
+
+button {
+  margin-top: 15px;
+  background-color: #E94D40; /* burnt red */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c63b32;
+}
+td {
+    padding: 10px;
+    border: 1px solid #0C243C;
+}
+.spaced-heading {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;      
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.product {
+  text-align: center;
+  max-width: 1200px;
+  margin-bottom: 30px;
+   margin: 20px auto;
+  padding: 0 10px; 
+  display: flex;          
+  flex-wrap: wrap;     
+  justify-content: space-between; 
+  margin-top: 20px;
+  gap: 20px;
+    border-radius: 10px;
+  overflow: hidden; 
+  padding: 10px;      
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product {
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+
+}.product {
+  transition: transform 0.2s ease;
+}
+
+.product:hover {
+  animation: squish 0.5s ease;
+}
+
+footer {
+  background-color: #0C243C; /* navy blue */
+  color: #fff;   /* force text to white */
+  padding: 20px;
+  text-align: center;
+}
+.footer h1 {
+   color: #fff;  
+}
+footer p {
+  color: #fff;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table th, table td {
+  border: 1px solid #0C243C;
+  padding: 10px;
+  text-align: center;
+}
+
+table th {
+  background-color: #0C243C;
+  color: white;
+}
+
+
+
